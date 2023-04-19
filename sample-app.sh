@@ -17,9 +17,9 @@ echo "COPY sample_app.py /home/myapp/" >> tempdir/Dockerfile
 
 echo "EXPOSE 8080" >> tempdir/Dockerfile
 
-echo "CMD python3 /home/myapp/sample_app.py"
+echo "CMD python3 /home/myapp/sample_app.py" >> tempdir/Dockerfile
 
 cd tempdir
-docker build -t sampleappp .
+docker build -t sampleapp .
 
 docker run -t -d -p 8080:8080 --name samplerunning sampleapp
